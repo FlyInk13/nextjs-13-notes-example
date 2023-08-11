@@ -1,0 +1,18 @@
+
+.NoteEditor {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+}
+
+.NoteEditor textarea {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  padding: 32px;
+  height: calc(100% - 4px);
+  max-width: 850px;
+  margin: auto;
+  position: relative;
+  display: block;
+}
