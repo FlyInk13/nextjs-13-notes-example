@@ -5,10 +5,12 @@
 
   --background-color: #eee;
   --text-color: #222;
+  --invalid-color: red;
   --link-text-color: #1565c0;
+  --border-color: rgba(0, 0, 0, .2);
   --shadow: rgba(0, 0, 0, .2);
   --border-radius: 5px;
-  --hover-backgraund: rgba(0, 0, 0, .02)
+  --hover-backgraund: rgba(0, 0, 0, .02);
 }
 
 @media (prefers-color-scheme: dark) {

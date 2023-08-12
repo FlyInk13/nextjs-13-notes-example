@@ -1,0 +1,12 @@
+
+.Input {
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+.Input:invalid {
+  border-color: var(--invalid-color);
+  outline-color: var(--invalid-color);
+}

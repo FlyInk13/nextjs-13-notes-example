@@ -1,5 +1,5 @@
 "use client"
-import { FC } from "react";
+import { FC, useEffect, useRef } from "react";
 import styles from './NoteEditor.module.css';
 import { saveNote } from "@/ClientAction/ClientNoteApi";
 import { TextArea } from "@/BaseComponents/TextArea/TextArea";
@@ -18,7 +18,8 @@ export const NoteEditor: FC<NoteEditorProps> = ({ id, value}) => {
     <div className={styles.NoteEditor}>
       <TextArea
         defaultValue={value}
-        onChange={(newValue: string) => saveNote(id, newValue)}
+        autoFocus={true}
+        onChange={(event) => saveNote(id, event.currentTarget.value)}
       />
     </div>
   )

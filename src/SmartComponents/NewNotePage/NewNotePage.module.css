@@ -17,22 +17,11 @@
   border-radius: var(--border-radius);
 }
 
-.NewNoteModal input,
-.NewNoteModal button {
-  padding: 8px 16px;
-  border: 1px solid var(--shadow);
-  border-radius: var(--border-radius);
-}
-
-.NewNoteModal h1 {
+.NewNoteHeader {
   margin-bottom: 16px;
 }
 
-.NewNoteModal input {
-  width: 100%;
-}
-
-.NewNoteModal button {
+.NewNoteCreateButton {
   display: block;
   margin-top: 16px;
   float: right;

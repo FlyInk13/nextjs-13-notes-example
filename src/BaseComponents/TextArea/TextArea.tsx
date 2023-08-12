@@ -1,14 +1,16 @@
 "use client"
 
-import { FC } from "react";
+import React, { FC } from "react";
 import styles from './TextArea.module.css';
 
-export const TextArea: FC<any> = ({ defaultValue, onChange }) => {
+interface TextAreaProps extends React.ComponentPropsWithRef<"textarea"> {
+}
+
+export const TextArea: FC<TextAreaProps> = ({ className, ...props }) => {
   return (
     <textarea
-      className={styles.TextArea}
-      defaultValue={defaultValue}
-      onChange={(e) => onChange(e.target.value)}
+      className={className + ' ' + styles.TextArea}
+      {...props}
     />
   )
 }
