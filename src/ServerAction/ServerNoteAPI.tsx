@@ -16,7 +16,11 @@ export const getNote = async (fileName: string): Promise<string> => {
 export const saveNote = async (fileName: string, value: string) => {
   const filePath = getNotePath(fileName);
 
-  fs.writeFileSync(filePath, value);
+  if (value.length) {
+    fs.writeFileSync(filePath, value);
+  } else {
+    fs.unlinkSync(filePath);
+  }
 }
 
 export const getNoteNames = async () => {

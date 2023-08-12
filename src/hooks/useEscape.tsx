@@ -6,6 +6,7 @@ export const useEscape = () => {
   const escapeListener = useCallback((e: KeyboardEvent) => {
     if (e.code === 'Escape') {
       router.replace('/');
+      router.refresh();
     }
   }, [router]);
 
@@ -13,5 +14,4 @@ export const useEscape = () => {
     window.addEventListener('keyup', escapeListener);
     return () => window.removeEventListener('keyup', escapeListener);
   }, [escapeListener]);
-
 }
