@@ -3,6 +3,7 @@ import { FC } from "react";
 import styles from './NoteEditor.module.css';
 import { saveNote } from "@/ClientAction/ClientNoteApi";
 import { TextArea } from "@/BaseComponents/TextArea/TextArea";
+import { useEscape } from "@/hooks/useEscape";
 
 type NoteEditorProps = {
   id: string,
@@ -11,6 +12,8 @@ type NoteEditorProps = {
 }
 
 export const NoteEditor: FC<NoteEditorProps> = ({ id, value}) => {
+  useEscape();
+
   return (
     <div className={styles.NoteEditor}>
       <TextArea
