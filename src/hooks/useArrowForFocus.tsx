@@ -1,11 +1,19 @@
 import { useCallback, useEffect } from "react";
 
 export const useArrowForFocus = (className: string) => {
+  const setDefaultFocus = useCallback(() => {
+    const focusElement = document.querySelector('.' + className);
+    if (focusElement instanceof HTMLElement) {
+      focusElement.focus();
+    }
+  }, [className]);
+
   const escapeListener = useCallback((event: KeyboardEvent) => {
     const currentFocus = document.querySelector<HTMLElement>(':focus');
     let focusElement: Element | null = null;
 
     if (!currentFocus) {
+      setDefaultFocus()
       return;
     }
 
@@ -21,15 +29,12 @@ export const useArrowForFocus = (className: string) => {
       focusElement.focus();
     }
 
-  }, []);
+  }, [setDefaultFocus]);
 
   useEffect(() => {
-    const focusElement = document.querySelector('.' + className);
-    if (focusElement instanceof HTMLElement) {
-      focusElement.focus();
-    }
+    setDefaultFocus();
 
     window.addEventListener('keyup', escapeListener);
     return () => window.removeEventListener('keyup', escapeListener);
-  }, [escapeListener]);
+  }, [setDefaultFocus, escapeListener]);
 }
