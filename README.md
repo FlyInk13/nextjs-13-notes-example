@@ -12,3 +12,5 @@ Example of using get and post api requests, fetch, server and client components 
   - ```docker run -p 3000:3000 -v "$(pwd)"/data:/data -d flyink13/nextjs-13-notes-example```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFlyInk13%2Fnextjs-13-notes-example)
