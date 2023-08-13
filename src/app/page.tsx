@@ -1,22 +1,24 @@
-import { getNoteNames } from "@/ServerAction/ServerNoteAPI";
 import { Metadata } from "next";
-import { NoteListPage } from "@/SmartComponents/NoteListPage/NoteListPage";
+import { ServerNoteAPI } from "@/lib/server/ServerNoteAPI";
+import { NoteIndexPage } from "./NoteIndexPage/NoteIndexPage";
 
 export const revalidate = 0;
-
 export const metadata: Metadata = {
   title: 'Notes',
   description: '',
 }
 
-export default async function Home() {
-  const noteNames = await getNoteNames();
+const NoteIndex = async () => {
+  const serverNoteApi = ServerNoteAPI.create();
+  const noteNames = await serverNoteApi.getNoteNames();
 
   return (
     <main>
-      <NoteListPage
+      <NoteIndexPage
         noteNames={noteNames}
       />
     </main>
   )
 }
+
+export default NoteIndex;

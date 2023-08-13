@@ -3,8 +3,8 @@ import { FC, FormEventHandler, useState } from "react";
 import styles from './NewNotePage.module.css';
 import { useRouter } from "next/navigation";
 import { useEscape } from "@/hooks/useEscape";
-import { Input } from "@/BaseComponents/Input/Input";
-import { Button } from "@/BaseComponents/Button/Button";
+import { Input } from "@/components/Input/Input";
+import { Button } from "@/components/Button/Button";
 
 type NewNotePageProps = {
 }

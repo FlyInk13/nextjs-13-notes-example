@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { NewNotePage } from "@/SmartComponents/NewNotePage/NewNotePage";
+import { NewNotePage } from "./NewNotePage/NewNotePage";
 
 type NewNoteProps = {
   params: {}

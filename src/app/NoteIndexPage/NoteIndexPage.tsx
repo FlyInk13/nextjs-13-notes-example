@@ -1,15 +1,15 @@
 "use client"
 import { FC } from "react";
-import styles from './NoteListPage.module.css';
+import styles from './NoteIndexPage.module.css';
 import Link from "next/link";
 import { useArrowForFocus } from "@/hooks/useArrowForFocus";
 
-type NoteListPageProps = {
+type NoteIndexPageProps = {
   noteNames: string[],
 }
 
 
-export const NoteListPage: FC<NoteListPageProps> = ({ noteNames }) => {
+export const NoteIndexPage: FC<NoteIndexPageProps> = ({ noteNames }) => {
   useArrowForFocus(styles.NoteLink);
 
   return (
