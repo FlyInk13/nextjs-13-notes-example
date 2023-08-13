@@ -17,7 +17,7 @@ export const generateMetadata = async ({ params }: NoteIdProps): Promise<Metadat
 
 
 const NoteId = async ({ params }: NoteIdProps) => {
-  const defaultValue = await getNote(params.id);
+  const defaultValue = await getNote(decodeURIComponent(params.id));
 
   return (
     <main>
