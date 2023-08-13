@@ -8,7 +8,7 @@ type NoteIdProps = {
 }
 
 export const generateMetadata = async ({ params }: NoteIdProps): Promise<Metadata> =>{
-  const id = params.id
+  const id = decodeURIComponent(params.id);
 
   return {
     title: 'Note ' + id,
