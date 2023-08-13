@@ -7,6 +7,8 @@ type NoteIdProps = {
   params: { id: string }
 }
 
+export const revalidate = 0;
+
 export const generateMetadata = async ({ params }: NoteIdProps): Promise<Metadata> =>{
   const id = decodeURIComponent(params.id);
 

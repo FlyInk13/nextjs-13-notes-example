@@ -1,7 +1,10 @@
 import fs from "fs";
 
-const basePath = 'data/';
-const getNotePath = (fileName: string): string => basePath + fileName.replace(/[^а-яa-z\d_ ]/ig, '') + '.txt';
+const DATA_PATH = process.env.DATA_PATH ?? 'data/';
+
+const getNotePath = (fileName: string): string => {
+  return DATA_PATH + fileName.replace(/[^а-яa-z\d_ ]/ig, '') + '.txt';
+}
 
 export const getNote = async (fileName: string): Promise<string> => {
   const filePath = getNotePath(fileName);
@@ -24,5 +27,5 @@ export const saveNote = async (fileName: string, value: string) => {
 }
 
 export const getNoteNames = async () => {
-  return fs.readdirSync(basePath).map(noteName => noteName.replace(/\.txt$/, ''));
+  return fs.readdirSync(DATA_PATH).map(noteName => noteName.replace(/\.txt$/, ''));
 }
