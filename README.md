@@ -1,5 +1,9 @@
 # NextJS Notes example
-Example of using get and post api requests, fetch, server and client components in NextJS 13
+Example of using:
+- NextJS 13 with app routes
+- get and post api requests
+- fetch api requests
+- server and client components
 
 ## Commands
 - Run dev server:
