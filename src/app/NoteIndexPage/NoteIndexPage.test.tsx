@@ -10,7 +10,7 @@ describe('NoteIndexPage', () => {
       />
     )
 
-    expect(screen.getByText('Create new note')).toBeInTheDocument();
+    expect(screen.getByText('New note')).toBeInTheDocument();
     expect(screen.getByText('note 1')).toBeInTheDocument();
     expect(screen.getByText('note 2')).toBeInTheDocument();
   })
@@ -22,11 +22,11 @@ describe('NoteIndexPage', () => {
       />
     )
 
-    expect(screen.getByText('Create new note')).toHaveFocus();
+    expect(screen.getByText('note 1')).toHaveFocus();
 
     const keyDownArrowDownEvent = new KeyboardEvent('keyup', { code: 'ArrowDown' });
     global.dispatchEvent(keyDownArrowDownEvent);
 
-    expect(screen.getByText('note 1')).toHaveFocus();
+    expect(screen.getByText('note 2')).toHaveFocus();
   })
 })

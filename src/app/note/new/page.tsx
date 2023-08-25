@@ -6,7 +6,7 @@ type NewNoteProps = {
 }
 
 export const metadata: Metadata = {
-  title: 'Create new note',
+  title: 'New note',
   description: '',
 }
 
