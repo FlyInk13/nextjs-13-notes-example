@@ -14,7 +14,7 @@ export class ServerNoteAPI {
   }
 
   private getNotePath(fileName: string): string {
-    return DATA_PATH + fileName.replace(/[^а-яa-z\d_ ]/ig, '') + '.txt';
+    return DATA_PATH + fileName.replace(/[^а-яa-z\d_ .]/ig, '') + '.txt';
   }
 
   async getNote(fileName: string): Promise<string> {

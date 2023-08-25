@@ -31,7 +31,7 @@ export const NewNotePage: FC<NewNotePageProps> = () => {
           defaultValue={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Note name"
-          pattern="[A-Za-zА-Яа-яЁё\d\s_\-]+"
+          pattern="[A-Za-zА-Яа-яЁё\d\s_\-.]+"
         />
         <Button className={styles.NewNoteCreateButton}>
           Create note
