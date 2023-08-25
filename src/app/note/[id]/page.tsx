@@ -17,13 +17,14 @@ export const generateMetadata = async ({ params }: NoteIdProps): Promise<Metadat
 
 
 const NoteEditor = async ({ params }: NoteIdProps) => {
+  const noteId = decodeURIComponent(params.id);
   const serverNoteApi = ServerNoteAPI.create();
-  const defaultValue = await serverNoteApi.getNote(decodeURIComponent(params.id));
+  const defaultValue = await serverNoteApi.getNote(noteId);
 
   return (
     <main>
       <NoteEditorPage
-        noteId={params.id}
+        noteId={noteId}
         value={defaultValue}
       />
     </main>
