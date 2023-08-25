@@ -1,16 +1,6 @@
 
-.PageWrap {
+.NoteIndex {
   padding: 32px;
-  max-width: 850px;
-  margin: auto;
-  position: relative;
-  display: block;
-  background: #fff;
-  min-height: 100vh;
-}
-
-.PageHeader {
-  margin-bottom: 16px;
 }
 
 .NoteLink {
@@ -25,6 +15,10 @@
   background: var(--hover-backgraund);
 }
 
-.NoteLink + .NoteLink {
-  margin-top: 6px;
+.NoteLink {
+  margin-bottom: 6px;
+}
+
+.NoteLink:last-child {
+  margin-top: 0;
 }

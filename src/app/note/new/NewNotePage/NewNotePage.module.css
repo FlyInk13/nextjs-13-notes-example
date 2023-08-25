@@ -20,9 +20,3 @@
 .NewNoteHeader {
   margin-bottom: 16px;
 }
-
-.NewNoteCreateButton {
-  display: block;
-  margin-top: 16px;
-  float: right;
-}

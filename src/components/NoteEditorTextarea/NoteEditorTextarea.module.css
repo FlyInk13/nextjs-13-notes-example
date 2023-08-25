@@ -1,0 +1,14 @@
+
+.NoteEditorTextarea {
+  border: none;
+  outline: none;
+  padding: 32px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  display: block;
+  resize: vertical;
+  flex: 1;
+}

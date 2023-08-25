@@ -1,0 +1,33 @@
+
+.PageHeader {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: var(--border-color) solid 1px;
+}
+
+.PageHeader > * {
+  padding: 8px 16px;
+  font-size: 13px;
+  border: 0;
+  border-radius: 0;
+  border-right: var(--border-color) solid 1px;
+  text-align: center;
+  background: inherit;
+}
+
+.PageHeader > *:nth-child(2) {
+  flex: 1;
+}
+
+.PageHeader > *:first-child,
+.PageHeader > *:last-child {
+  color: var(--link-text-color);
+  min-width: 100px;
+}
+
+.PageHeader > *:last-child {
+  border-right: none;
+}
