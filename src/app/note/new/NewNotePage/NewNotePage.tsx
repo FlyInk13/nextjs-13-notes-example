@@ -56,7 +56,6 @@ export const NewNotePage: FC<NewNotePageProps> = () => {
       />
       <NoteEditorTextarea
         defaultValue={noteValue}
-        autoFocus={true}
         onChange={(event) => setNoteValue(event.currentTarget.value)}
       />
     </PageWrap>
